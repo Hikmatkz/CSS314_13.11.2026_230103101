@@ -1,0 +1,20 @@
+============================================================
+PHASE 0: SYSTEM INTERROGATION
+============================================================
+Student ID: 230103101
+CPU architecture: arm64
+Operating system: macOS-26.3.1-arm64-arm-64bit-Mach-O
+Python version: 3.13.7 (v3.13.7:bcee1c32211, Aug 14 2025, 19:10:51) [Clang 16.0.0 (clang-1600.0.26.6)]
+Multiprocessing method: spawn
+Logical CPU count: 10
+
+CLOCK CALIBRATION
+Clock reads: 2000000
+Total measurement time (ns): 109620541
+Average clock read latency (ns): 54.8103
+
+VERIFICATION
+VERIFY_HASH [PHASE0]: 7F7341EC12C82155 (P_log=10)
+============================================================
+PHASE 0 COMPLETED
+============================================================
