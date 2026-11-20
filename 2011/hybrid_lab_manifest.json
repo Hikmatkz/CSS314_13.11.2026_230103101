@@ -1,0 +1,84 @@
+{
+  "github_username": "Hikmatkz",
+  "instance_seed": 9066825704382970983,
+  "cpu_signature": "x86_64::x86_64::2",
+  "cpu_line_bytes": 64,
+  "gpu_uuid": "GPU-47f56f95-9225-9280-1076-acc5cde4ffbf",
+  "gpu_name": "Tesla T4",
+  "mpi_ranks": 4,
+  "global_shape": [
+    512,
+    512
+  ],
+  "local_shape_with_ghosts": [
+    258,
+    258
+  ],
+  "steps": 300,
+  "dx": 0.001949317738791423,
+  "kappa_max": 0.14999941402072142,
+  "dt": 1.266618163668954e-06,
+  "dt_max": 6.3330908183447694e-06,
+  "cfl_ratio_dt_over_dtmax": 0.2,
+  "gpu_serialized_ms": 7712.840789999999,
+  "gpu_overlapped_ms": 1211.037976,
+  "max_diff_serialized_vs_overlapped": 0.0,
+  "global_energy_sum_of_squares": {
+    "0": 65792.25000000001,
+    "100": 65749.51437663526,
+    "200": 65707.37729869847,
+    "300": 65665.64291795767
+  },
+  "ptx_instruction_counts": {
+    "st.shared.f64": 5,
+    "ld.shared.f64": 5,
+    "bar.sync": 1
+  },
+  "llvm_audit_counts": {
+    "llvm_load_store_instruction_lines": 16,
+    "llvm_load_lines": 10,
+    "llvm_store_lines": 3
+  },
+  "shared_memory_stride_benchmarks": {
+    "1": {
+      "max_elapsed_seconds": 0.00010400599999904614,
+      "updates_per_rank": 40000000,
+      "verified": true,
+      "final_values": [
+        40000000,
+        40000000,
+        40000000,
+        40000000
+      ]
+    },
+    "8": {
+      "max_elapsed_seconds": 5.615499999933604e-05,
+      "updates_per_rank": 40000000,
+      "verified": true,
+      "final_values": [
+        40000000,
+        40000000,
+        40000000,
+        40000000
+      ]
+    },
+    "16": {
+      "max_elapsed_seconds": 4.898400000108438e-05,
+      "updates_per_rank": 40000000,
+      "verified": true,
+      "final_values": [
+        40000000,
+        40000000,
+        40000000,
+        40000000
+      ]
+    }
+  },
+  "assumptions": {
+    "pde": "u_t = div(kappa grad(u)) + source - lambda*u",
+    "source": "zero source field",
+    "physical_boundary": "zero-normal-gradient (ghost equals adjacent interior)",
+    "energy_metric": "global sum of u squared; expected to dissipate",
+    "stencil": "conservative 5-point variable-coefficient diffusion"
+  }
+}
